@@ -17,7 +17,7 @@ type CharacterSectionProps = {
   title: string;
   page: number;
   onPageChange: (page: number) => void;
-  onCharacterSelect: (character: Character | null) => void; // Ahora acepta null
+  onCharacterSelect: (character: Character | null) => void; 
   selectedCharacter: Character | null;
 }
 
@@ -53,7 +53,6 @@ export const CharacterSection = ({
             />
           ))}
           
-          {/* Skeleton placeholders when loading */}
           {isLoading && Array.from({ length: 20 }).map((_, index) => (
             <div 
               key={index}
@@ -78,7 +77,6 @@ export const CharacterSection = ({
               />
             </PaginationItem>
             
-            {/* Show page numbers */}
             {Array.from({ length: Math.min(5, data.info.pages) }, (_, i) => {
               const pageNum = page <= 3 ? i + 1 : page - 2 + i;
               if (pageNum > data.info.pages) return null;
