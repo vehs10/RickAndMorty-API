@@ -25,8 +25,8 @@ export const EpisodeTable = ({ title, episodes, loading = false, bgColor = "bg-g
           <div className="flex items-center justify-center h-full">
             <div className="text-gray-400 text-center">
               <div className="text-2xl mb-2">📺</div>
-              <div>No episodes to show</div>
-              <div className="text-sm">Select characters to see episodes</div>
+              <div>No hay episodios para mostrar</div>
+              <div className="text-sm">Selecciona personajes para ver episodios</div>
             </div>
           </div>
         ) : (
