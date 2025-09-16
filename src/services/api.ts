@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const API_URL = process.env.NEXT_PUBLIC_RICK_AND_MORTY_API_URL || "https://rickandmortyapi.com/api";
+export const API_URL = process.env.NEXT_PUBLIC_RICK_AND_MORTY_API_URL;
 
 const api = axios.create({
   baseURL: API_URL,

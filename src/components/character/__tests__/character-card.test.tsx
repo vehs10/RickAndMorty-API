@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import { CharacterCard } from '../character-card'
+import { API_URL } from '@/services/api'
 
 // Mock character data
 const mockCharacter = {
@@ -12,15 +13,15 @@ const mockCharacter = {
   gender: 'Male' as 'Male' | 'Female' | 'Genderless' | 'unknown',
   origin: {
     name: 'Earth (C-137)',
-    url: 'https://rickandmortyapi.com/api/location/1'
+    url: `${API_URL}/location/1`
   },
   location: {
     name: 'Citadel of Ricks',
-    url: 'https://rickandmortyapi.com/api/location/3'
+    url: `${API_URL}/location/3`
   },
-  image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
-  episode: ['https://rickandmortyapi.com/api/episode/1'],
-  url: 'https://rickandmortyapi.com/api/character/1',
+  image: `${API_URL}/character/avatar/1.jpeg`,
+  episode: [`${API_URL}/episode/1`],
+  url: `${API_URL}/character/1`,
   created: '2017-11-04T18:48:46.250Z'
 }
 

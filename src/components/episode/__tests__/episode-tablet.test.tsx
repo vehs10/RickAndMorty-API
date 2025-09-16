@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import { EpisodeTable } from '../episode-tablet'
+import { API_URL } from '@/services/api'
 
 const mockEpisodes = [
   {
@@ -9,7 +10,7 @@ const mockEpisodes = [
     air_date: 'December 2, 2013',
     episode: 'S01E01',
     characters: [],
-    url: 'https://rickandmortyapi.com/api/episode/1',
+    url: `${API_URL}/episode/1`,
     created: '2017-11-10T12:56:33.798Z'
   },
   {
@@ -18,7 +19,7 @@ const mockEpisodes = [
     air_date: 'December 9, 2013',
     episode: 'S01E02',
     characters: [],
-    url: 'https://rickandmortyapi.com/api/episode/2',
+    url: `${API_URL}/episode/2`,
     created: '2017-11-10T12:56:33.916Z'
   }
 ]
