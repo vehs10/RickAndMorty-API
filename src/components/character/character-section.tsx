@@ -43,7 +43,7 @@ export const CharacterSection = ({
           </div>
         )}
         
-        <div className="grid grid-cols-4 gap-2 h-[620px] mb-4 p-2 bg-gray-50/50 rounded-lg border">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 h-[400px] sm:h-[500px] lg:h-[620px] mb-4 p-2 bg-gray-50/50 rounded-lg border overflow-y-auto">
           {data?.results.map((character) => (
             <CharacterCard
               key={character.id}

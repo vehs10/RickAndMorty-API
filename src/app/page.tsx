@@ -40,7 +40,7 @@ export default function Home() {
 
       <main className="container mx-auto px-4 py-8">
         <ContainerLayout className="mb-8">
-          <div className="flex gap-0 relative">
+          <div className="flex flex-col lg:flex-row gap-0 lg:gap-0 relative">
             <div className="flex-1">
               <CharacterSection
                 title="Personaje #1"
@@ -50,8 +50,10 @@ export default function Home() {
                 selectedCharacter={selectedCharacter1}
               />
             </div>
-            <Separator />
-            <div className="flex-1">
+            <div className="hidden lg:block">
+              <Separator />
+            </div>
+            <div className="flex-1 mt-8 lg:mt-0">
               <CharacterSection
                 title="Personaje #2"
                 page={page2}
