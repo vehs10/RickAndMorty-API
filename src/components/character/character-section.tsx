@@ -28,7 +28,7 @@ export const CharacterSection = ({
   onCharacterSelect, 
   selectedCharacter 
 }: CharacterSectionProps) => {
-  const { data, isLoading } = useCharacters(page, title.toLowerCase().replace(' ', ''));
+  const { data, isLoading } = useCharacters(page);
 
   return (
     <div className="flex-1">
