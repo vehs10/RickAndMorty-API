@@ -14,9 +14,6 @@ type Character = Awaited<
 >["results"][number];
 
 export default function Home() {
-  const [page1, setPage1] = useState(1);
-  const [page2, setPage2] = useState(1);
-
   const [selectedCharacter1, setSelectedCharacter1] =
     useState<Character | null>(null);
   const [selectedCharacter2, setSelectedCharacter2] =
@@ -44,8 +41,6 @@ export default function Home() {
             <div className="flex-1">
               <CharacterSection
                 title="Personaje #1"
-                page={page1}
-                onPageChange={setPage1}
                 onCharacterSelect={setSelectedCharacter1}
                 selectedCharacter={selectedCharacter1}
               />
@@ -56,8 +51,6 @@ export default function Home() {
             <div className="flex-1 mt-8 lg:mt-0">
               <CharacterSection
                 title="Personaje #2"
-                page={page2}
-                onPageChange={setPage2}
                 onCharacterSelect={setSelectedCharacter2}
                 selectedCharacter={selectedCharacter2}
               />
